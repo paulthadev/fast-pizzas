@@ -2,6 +2,12 @@ import { useLoaderData } from "react-router-dom";
 import { getMenu } from "../../services/apiRestaurant";
 import MenuItem from "./MenuItem";
 
+/* loader function from apiRestaurant */
+export async function loader() {
+  const menu = await getMenu();
+  return menu;
+}
+
 function Menu() {
   const menu = useLoaderData();
 
@@ -12,12 +18,6 @@ function Menu() {
       ))}
     </ul>
   );
-}
-
-// loader function from API
-export async function loader() {
-  const menu = await getMenu();
-  return menu;
 }
 
 export default Menu;
