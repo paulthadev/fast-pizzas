@@ -7,9 +7,9 @@ export default {
       sans: "Roboto Mono, monospace",
     },
     extend: {
-      height: {
-        screen: "100dvh",
-      },
+      // height: {
+      //   screen: "100dvh",
+      // },
     },
   },
   plugins: [],
