@@ -1,13 +1,11 @@
-// Test ID: IIDSAT
-
 import { useLoaderData } from "react-router-dom";
 import { getOrder } from "../../services/apiRestaurant";
+import OrderItem from "./OrderItem";
 import {
   calcMinutesLeft,
   formatCurrency,
   formatDate,
 } from "../../utils/helpers";
-import OrderItem from "./OrderItem";
 
 /* loader function from apiRestaurant data */
 export async function loader({ params }) {
@@ -21,6 +19,7 @@ function Order() {
   // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
   const {
     id,
+    customer,
     status,
     priority,
     priorityPrice,
@@ -32,8 +31,11 @@ function Order() {
 
   return (
     <div className="space-y-8 px-4 py-6">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-xl font-semibold">Order #{id} Status</h2>
+      <div className="flex flex-wrap items-center justify-between gap-4 md:gap-2">
+        <h2 className="text-xl font-extrabold">
+          Order #{id} Status
+          <p className="text-sm font-extralight">Name: {customer}</p>
+        </h2>
 
         <div className="space-x-2">
           {priority && (
