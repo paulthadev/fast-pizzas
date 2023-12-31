@@ -68,7 +68,7 @@ const userSlice = createSlice({
         state.status = "error";
         state.error =
           action.error.message === "User denied Geolocation"
-            ? "Kindly allow or turn on location service"
+            ? "Kindly allow or turn on location service or type it in manually."
             : "Can't find your address, check your network connection or type it in manually.";
       }),
 });

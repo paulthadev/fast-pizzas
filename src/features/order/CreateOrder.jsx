@@ -176,7 +176,6 @@ export async function action({ request }) {
 
   /* Redirect the page*/
   return redirect(`/order/${newOrder.id}`);
-  return null;
 }
 
 export default CreateOrder;
