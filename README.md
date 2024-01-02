@@ -1,5 +1,3 @@
-# fast-pizzas
-
 <h1 align="center">Fast Pizzas🍕</h1>
 
 ### <h3 align="center"> Click here 👉 [Live Preview](https://fastpizzas.vercel.app/)</h3>
